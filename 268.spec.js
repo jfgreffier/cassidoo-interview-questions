@@ -1,12 +1,8 @@
 function fibLike(one, two, length) {
   const result = [one, two];
-  let sequenceLength = length;
-
-  while (sequenceLength > 2) {
+  for (let i = 2; i < length; i++) {
     result.push(result[result.length - 1] + result[result.length - 2]);
-    sequenceLength--;
   }
-
   return result;
 }
 
