@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 function truncate(text, truncate) {
   const word = /[a-z]+/g;
   const wordOrNot = /[a-z]+|[^a-z]+/g;
@@ -17,10 +19,10 @@ function truncate(text, truncate) {
 // Or that there are alway spaces in between words
 // 用英文就是很用以的。
 
-it("Cassidoo's first example", () => {
+test("Cassidoo's first example", () => {
   expect(truncate('never gonna give you up', 3)).toBe('nev gon giv you up');
 });
 
-it("Cassidoo's second example", () => {
+test("Cassidoo's second example", () => {
   expect(truncate('*hello* darkness, my ~old_friend', 3)).toBe('*hel* dar, my ~old_fri');
 });

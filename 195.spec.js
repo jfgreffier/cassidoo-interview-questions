@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 function sameDigits(n) {
   const ncube = n ** 3;
   for (const digit of n + '') {
@@ -13,7 +15,7 @@ function sameDigits(n) {
   return true;
 }
 
-it('rocks', () => {
+test('rocks', () => {
   expect(sameDigits(1)).toBe(true);
   expect(sameDigits(10)).toBe(true);
   expect(sameDigits(251894)).toBe(true);

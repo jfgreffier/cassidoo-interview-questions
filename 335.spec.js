@@ -1,3 +1,5 @@
+import { beforeEach, describe, expect, test } from 'vitest';
+
 function flip1DArray(array) {
   return array.toReversed();
 }
@@ -52,7 +54,7 @@ describe('flip', () => {
     ];
   });
 
-  it('should flip horizontally', () => {
+  test('should flip horizontally', () => {
     const result = flip(array, 'horizontal');
     expect(result).toStrictEqual([
       [3, 2, 1],
@@ -61,7 +63,7 @@ describe('flip', () => {
     ]);
   });
 
-  it('should flip vertically', () => {
+  test('should flip vertically', () => {
     const result = flip(array, 'vertical');
     expect(result).toStrictEqual([
       [7, 8, 9],

@@ -1,3 +1,5 @@
+import { expect, test } from 'vitest';
+
 function lonelyNumber(a, b, c) {
   const array = [a, b, c];
   array.sort((a, b) => a - b);
@@ -10,7 +12,7 @@ function lonelyNumber(a, b, c) {
   return result;
 }
 
-it('works!', () => {
+test('works!', () => {
   expect(lonelyNumber(1, 2, 3)).toBe(6);
   expect(lonelyNumber(6, 6, 4)).toBe(4);
   expect(lonelyNumber(7, 7, 7)).toBe(1);
